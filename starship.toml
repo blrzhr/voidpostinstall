@@ -1,0 +1,10 @@
+# blank line between shell prompts
+add_newline = true
+
+# one line prompt
+[line_break]
+disabled = true
+
+# disable command duration 
+[cmd_duration]
+disabled = true
