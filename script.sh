@@ -37,7 +37,7 @@ reboot
 # starship.toml 			.config/
 
 # extensions 
-# app grid - blur my shell - gsconnect - hide activities button - hide top bat  - impatience  
+# app grid - blur my shell - gsconnect - hide activities button - hide top bat  - impatience - user themes
 
 # Gtk2/3+
 # Adwaita-dark    .local/share/themes/
