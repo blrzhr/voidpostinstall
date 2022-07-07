@@ -12,7 +12,7 @@ echo export QT_STYLE_OVERRIDE=kvantum >> /etc/environment
 kvantummanager --set KvGnomeDark 
 
 # remove packages
-xbps-remove -Fy sudo openssh acpid dhcpcd gnome-user-docs yelp yelp-xsl gnome-shell-extensions gnome-backgrounds linux-firmware-amd linux-firmware-nvidia cheese gnome-calendar gnome-contacts gnome-font-viewer gnome-music gnome-remote-desktop orca sane simple-scan totem network-manager-applet
+xbps-remove -Fy openssh acpid dhcpcd linux-firmware-amd linux-firmware-nvidia gnome-user-docs yelp yelp-xsl gnome-shell-extensions cheese gnome-font-viewer gnome-music orca sane simple-scan totem network-manager-applet gnome-contacts gnome-calendar
 xbps-remove -oOy
 
 # runit services
