@@ -19,16 +19,12 @@ xbps-remove -oOy
 rm /var/service/agetty-tty4
 rm /var/service/agetty-tty5
 rm /var/service/agetty-tty6
-rm /var/service/acpid
 rm /var/service/bluetoothd
-rm /var/service/brltty
 rm /var/service/colord
-rm /var/service/dhcpcd
 rm /var/service/elogind
 rm /var/service/polkitd
 rm /var/service/rtkit
 rm /var/service/slapd
-rm /var/service/sshd
 rm /var/service/uuidd
 
 reboot
@@ -39,6 +35,13 @@ reboot
 # command prompt
 # eval "$(starship init bash)"		.bashrc
 # starship.toml 			.config/
+
+# extensions 
+# app grid - blur my shell - gsconnect - hide activities button - hide top bat  - impatience  
+
+# Gtk2/3+
+# Adwaita-dark    .local/share/themes/
+# gsettings set org.gnome.desktop.interface gtk-theme 'Adwaita-dark'
 
 # aliases
 # alias cl="clear"
