@@ -8,7 +8,7 @@ xbps-install -Sy gnome intel-ucode xorg-fonts mesa-vulkan-intel intel-video-acce
 flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
 
 # remove packages
-xbps-remove -Fy openssh acpid dhcpcd linux-firmware-amd linux-firmware-nvidia gnome-user-docs yelp yelp-xsl gnome-shell-extensions cheese gnome-font-viewer gnome-music orca sane simple-scan totem network-manager-applet gnome-contacts gnome-calendar
+xbps-remove -Fy openssh acpid sudo dhcpcd linux-firmware-amd linux-firmware-nvidia gnome-user-docs yelp yelp-xsl gnome-shell-extensions cheese gnome-font-viewer gnome-music orca sane simple-scan totem network-manager-applet gnome-contacts gnome-calendar
 xbps-remove -oOy
 
 # runit services
@@ -25,25 +25,25 @@ rm /var/service/uuidd
 
 reboot
 
-#  /etc/doas.conf
-# echo permit nopass "user" as root 
+# Doas
+# echo permit nopass <> as root >> /etc/doas.conf
 
-# command prompt
-# eval "$(starship init bash)"		.bashrc
-# starship.toml 			.config/
-
-# extensions 
-# alpha app grid - blur my shell - gsconnect - hide activities button - hide top bat  - impatience - user themes - netspeed - nightlight
+# Command prompt
+# echo eval "$(starship init bash)" >> ~/.bashrc
+# cp starship.toml ~/.config/
 
 # Kvantum 
 # echo export QT_STYLE_OVERRIDE=kvantum >> /etc/environment
 # kvantummanager --set KvGnomeDark 
 
-# Gtk2/3+
-# Adwaita-dark    .local/share/themes/
+# Gtk2/3+ theme
+# mkdir ~/.local/share/themes
+# unzip Adwaita-dark.zip -d ~/.local/share/themes/
 # gsettings set org.gnome.desktop.interface gtk-theme 'Adwaita-dark'
 
-# aliases
+# ---------------------------------------------------------------------
+
+# Aliases
 # alias cl="clear"
 # alias it="doas xbps-install"
 # alias dl="doas xbps-remove"
@@ -51,6 +51,9 @@ reboot
 # alias fi="doas flatpak install"
 # alias fr="doas flatpak remove"
 # alias fu="doas flatpak update"
+
+# Extensions 
+# alpha app grid - blur my shell - gsconnect - hide activities button - hide top bat  - impatience - user themes - netspeed - nightlight
 
 # cp /etc/xdg/autostart/<> ~/.config/autostart
 # echo X-GNOME-Autostart-enabled=false >> ~/.config/autostart/<>
