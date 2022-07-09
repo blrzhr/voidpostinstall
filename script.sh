@@ -7,10 +7,6 @@ xbps-install -Sy gnome intel-ucode xorg-fonts mesa-vulkan-intel intel-video-acce
 # flatpak 
 flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
 
-# Kvantum 
-echo export QT_STYLE_OVERRIDE=kvantum >> /etc/environment
-kvantummanager --set KvGnomeDark 
-
 # remove packages
 xbps-remove -Fy openssh acpid dhcpcd linux-firmware-amd linux-firmware-nvidia gnome-user-docs yelp yelp-xsl gnome-shell-extensions cheese gnome-font-viewer gnome-music orca sane simple-scan totem network-manager-applet gnome-contacts gnome-calendar
 xbps-remove -oOy
@@ -37,7 +33,11 @@ reboot
 # starship.toml 			.config/
 
 # extensions 
-# app grid - blur my shell - gsconnect - hide activities button - hide top bat  - impatience - user themes
+# alpha app grid - blur my shell - gsconnect - hide activities button - hide top bat  - impatience - user themes - netspeed - nightlight
+
+# Kvantum 
+# echo export QT_STYLE_OVERRIDE=kvantum >> /etc/environment
+# kvantummanager --set KvGnomeDark 
 
 # Gtk2/3+
 # Adwaita-dark    .local/share/themes/
@@ -52,17 +52,5 @@ reboot
 # alias fr="doas flatpak remove"
 # alias fu="doas flatpak update"
 
-# cp /etc/xdg/autostart/geoclue-demo-agent.desktop ~/.config/autostart
-# cp /etc/xdg/autostart/gnome-keyring-ssh.desktop ~/.config/autostart
-# cp /etc/xdg/autostart/org.gnome.Evolution-alarm-notify.desktop ~/.config/autostart
-# cp /etc/xdg/autostart/org.gnome.SettingsDaemon.PrintNotifications.desktop ~/.config/autostart
-# cp /etc/xdg/autostart/org.gnome.SettingsDaemon.Wacom.desktop ~/.config/autostart
-# cp /etc/xdg/autostart/org.gnome.SettingsDaemon.Wwan.desktop ~/.config/autostart
-# cp /etc/xdg/autostart/zeitgeist-datahub.desktop ~/.config/autostart
-# echo X-GNOME-Autostart-enabled=false >> ~/.config/autostart/geoclue-demo-agent.desktop
-# echo X-GNOME-Autostart-enabled=false >> ~/.config/autostart/gnome-keyring-ssh.desktop 
-# echo X-GNOME-Autostart-enabled=false >> ~/.config/autostart/org.gnome.Evolution-alarm-notify.desktop
-# echo X-GNOME-Autostart-enabled=false >> ~/.config/autostart/org.gnome.SettingsDaemon.PrintNotifications.desktop 
-# echo X-GNOME-Autostart-enabled=false >> ~/.config/autostart/org.gnome.SettingsDaemon.Wacom.desktop 
-# echo X-GNOME-Autostart-enabled=false >> ~/.config/autostart/org.gnome.SettingsDaemon.Wwan.desktop
-# echo X-GNOME-Autostart-enabled=false >> ~/.config/autostart/zeitgeist-datahub.desktop
+# cp /etc/xdg/autostart/<> ~/.config/autostart
+# echo X-GNOME-Autostart-enabled=false >> ~/.config/autostart/<>
